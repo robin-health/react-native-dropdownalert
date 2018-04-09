@@ -35,6 +35,7 @@ export default class DropdownAlert extends Component {
     startDelta: PropTypes.number,
     endDelta: PropTypes.number,
     containerStyle: ViewPropTypes.style,
+    wrapperStyle: ViewPropTypes.style,
     safeAreaStyle:ViewPropTypes.style,
     titleStyle: Text.propTypes.style,
     messageStyle: Text.propTypes.style,
@@ -482,6 +483,7 @@ export default class DropdownAlert extends Component {
         left: 0,
         right: 0,
         elevation: this.props.elevation,
+        ...this.props.wrapperStyle,
       };
       if (this.props.zIndex != null) wrapperStyle['zIndex'] = this.props.zIndex;
       return (
